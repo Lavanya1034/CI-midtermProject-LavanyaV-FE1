@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ff1f96fd.css",
+    "main.js": "/static/js/main.7c1a6261.js",
+    "static/media/logo-axa.svg": "/static/media/logo-axa.bd04a720dc4eadecf4a57e87916edf40.svg",
+    "index.html": "/index.html",
+    "main.ff1f96fd.css.map": "/static/css/main.ff1f96fd.css.map",
+    "main.7c1a6261.js.map": "/static/js/main.7c1a6261.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff1f96fd.css",
+    "static/js/main.7c1a6261.js"
+  ]
+}

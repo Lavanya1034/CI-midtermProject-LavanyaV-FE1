@@ -1,0 +1,206 @@
+#body-sec{
+    box-sizing: border-box;
+    width:100vw;
+    
+}
+
+.data-output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    
+}
+
+.left-outer{
+    display: flex;
+    flex-basis: 60%;
+    flex-direction: column;
+    overflow-y:scroll;
+    height:37vw;
+    margin:15px 0;
+}
+.wishCardStyle{
+    width:30%;
+    margin: 2% 1%;
+    
+}
+.mediaChange{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eachproduct-detail{
+    border: 0.01px solid rgb(228, 220, 220);
+    margin:1% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 340px;
+    padding: 10px;
+}
+
+#left-sec,#right-sec{
+    display: flex;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+    height:340px;
+   
+    
+}
+#right-sec{
+    margin-left: 10px;
+}
+
+
+#image-size{
+    width:50%;
+    height:200px;
+    
+}
+.title-space{
+    height:100px;
+    width:100%;
+    
+}
+.font-changing{
+    font-size: 18px;
+    color:rgb(98, 114, 230);
+    width:100%;
+   
+    
+}
+#right-inner{
+    width:70%;
+}
+
+#bottom-sym{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.cart-sym{
+    font-size:30px;
+    cursor: pointer;
+}
+#Empty-det{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:30%;
+    height:30vw;
+    margin:5% 35%;
+    
+    flex-direction: column;
+    
+    color: #074192;
+    font-weight:bolder;
+    font-size: 30px;
+    border: 0.01px solid rgb(152, 150, 150);
+    
+}
+
+#btn-cont{
+    font-size: 15px;
+    padding: 2%;
+    background-color: red;
+    color: white;
+}
+.trash{
+    color:red;
+    margin-top: "0.5em";
+    margin-bottom:"10px";
+    cursor: "pointer";       
+                   
+}
+.trashbtnCart{
+    margin-left: -75%;
+}
+
+
+#right-outer{
+    display: flex;
+    flex-basis: 40%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+    padding: 2% 5%;
+}
+#wishListHead{
+    font-size: 30px;
+    color:blue;
+}
+
+
+@media only screen and (max-width:406px){
+    
+    #Empty-det{
+        margin-left: 30%;
+    }
+    
+    .eachproduct-detail{
+        height:fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+    .font-changing{
+        height:90px;  
+    }
+}
+@media only screen and (min-width:407px) and (max-width:592px){
+
+    #eachproduct-detail{
+        border: 0.01px solid rgb(228, 220, 220);
+        margin:5%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+        width:fit-content;
+        padding: 10px;
+        
+    }
+    #left-sec,#right-sec{
+        height:400px;
+    }
+    .font-changing{
+       height:90px;
+       font-size: small;
+        color:rgb(98, 114, 230);
+        width:100%;
+    }
+    
+    
+}
+
+@media only screen and (max-width:767px){
+    
+    .mediaChange{
+        display: flex;
+        flex-direction: column;
+    }
+    .wishCardStyle{
+        width:100%;
+        margin: 1%;
+    }
+    .data-output{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:984px){
+    #Empty-det{
+        text-align: center;
+    }
+    
+    .trashbtnCart{
+        margin-left: -65%;
+    }
+}
+

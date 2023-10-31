@@ -1,0 +1,85 @@
+#eachProducts{
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+    width:21%;
+    height:650px;
+}
+#heartSymb{
+    font-size: 25px;
+    position: relative;
+    
+   
+}
+
+#image-style{
+    width:90%;
+    height:200px;
+    z-index: 1;
+    padding: 0 10px;
+  
+}
+#brand-title{
+    font-size:15px;
+    height:100px;
+    
+}
+
+ 
+#image-style:hover {
+    cursor: pointer;
+    width:95%;
+}
+#image-zoom{
+   
+    opacity:0;
+    margin-top: -20em;
+    margin-left:7em;
+    width:30%;
+    height:20%;
+    font-size: 10px;
+    
+}
+#image-zoom:hover{
+    opacity:0.5;
+    
+
+}
+@media only screen and (max-width:382px){
+    #eachProducts{
+        display: flex;
+        margin: 5px;
+        padding: 10px;
+        width:100vw;
+        height:fit-content;
+    }
+
+    #brand-title{
+        font-size:15px;
+        height:100px;
+    }
+}
+
+@media only screen and (min-width:383px) and (max-width:592px){
+
+    #eachProducts{
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        padding: 10px;
+        width:100vw;
+        height:fit-content;
+    }
+}
+
+@media only screen and (min-width:593px) and (max-width:906px){
+
+    #eachProducts{
+        display: flex;
+        margin: 20px 5px;
+        padding: 10px;
+        width:30%;
+        height:700px;
+        
+    }
+}

@@ -1,0 +1,21 @@
+
+.wrapper{
+  background-color: #fff;
+  padding: 40px;
+  margin: 80px 0;  
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+
+.form-signup,#login-head{
+    
+    height:30%;
+    text-align: center;
+    color:#5393f3;
+    
+}
+
+.form-err{
+  color:red;
+}

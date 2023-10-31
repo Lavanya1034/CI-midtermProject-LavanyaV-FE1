@@ -1,0 +1,50 @@
+.summaryBorder{
+    border: 0.01px solid rgb(228, 220, 220);
+    padding:10px 0;
+}
+
+
+#checkOut{
+    padding: 6px;
+    background-color: red;
+    color:white;
+}
+#wishListHead{
+    font-size: 30px;
+    color:blue;
+    margin-bottom: 30px;
+}
+.btn-move{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#checkOut:hover{
+    background-color: blueviolet;
+}
+
+.price-values{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.priceHeading{
+    font-size: 20px;
+}
+.priceVal{
+    width:10em;
+    color:red;
+}
+
+@media only screen and (max-width:592px){
+
+    #wishListHead{
+        height:50px;
+    }
+    .priceHeading,.priceVal{
+        height: 40px;
+    }
+}

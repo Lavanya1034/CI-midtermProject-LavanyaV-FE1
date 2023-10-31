@@ -1,0 +1,166 @@
+#layout{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+    background-color:black;
+    width:100%;
+}
+
+#LayoutStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    background-color: white;
+    color:black;
+    height:60px;
+    border: 2px solid rgb(222, 219, 219);
+    border-radius: 9px;
+    padding: 20px 10px;
+    cursor: pointer;
+}
+
+#loginName{
+    font-size: 20px;
+    text-align: left;
+    font-weight: 100px;
+   
+}
+.searchOpt{
+    border-radius: 10px;
+    
+}
+#signupName{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 10px;
+    font-size: 14px;
+}
+#right-layout{
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+.right-icons{
+    font-size: 3em;
+    margin:10px;
+    cursor: pointer;
+}
+#wishIcon{
+    color:red;
+}
+    
+.superScript{
+    display: flex;
+}
+
+#loginOut{
+    display: none;
+}
+#welcome-note{
+    display:flex;
+    gap:10px;
+  
+}
+#note{
+    background-color: rgb(248, 140, 140);
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 3px;
+    font-weight: bolder;
+}
+#drop-resp{
+    background-color: #AEDEFC;
+}
+.dropDown{
+    @apply flex items-center gap-2;
+}
+/* media queries */
+
+@media only screen and (max-width:270px) {
+    #layout{
+        
+        width:fit-content;
+    }
+
+}
+
+@media only screen and (max-width:592px) {
+    
+    #layout{
+        display: flex;
+        flex-direction: column;
+        
+
+    }
+    #right-layout{
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+        align-items: center;
+        
+    }
+    #LayoutStyle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        background-color: white;
+        color:black;
+        height:60px;
+        border: 2px solid rgb(222, 219, 219);
+        border-radius: 9px;
+        padding: 0;
+       
+    }
+    #drop-resp{
+        display: none;
+        
+    }
+    #heading-first{
+
+        text-align: center;
+        padding:20px;
+    }
+    #drop-login{
+        display: none;
+    }
+    #loginOut{
+        display: flex;
+        gap:10px;
+    }
+    #welcome-note{
+        display: flex;
+        flex-direction: column;
+    }
+    #note{
+        font-size: 90%;
+        
+    }
+    #heading-first{
+        display: flex;
+        justify-content: center;
+       }
+  }
+
+  @media only screen and (min-width:593px) and (max-width:992px){
+    #layout{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        padding:2% 0;
+        
+    }
+    #heading-first{
+        display: flex;
+        justify-content: center;
+       }
+   
+  }
+  /* @media only screen and (min-width:685px) and (max-width:992px){
+    #layout{
+        padding:1% 1%;
+    }
+  } */
+  

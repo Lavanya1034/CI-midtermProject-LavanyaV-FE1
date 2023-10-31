@@ -1,0 +1,9 @@
+.display-allcards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color:#f2fafe ;
+    /* background-color: #fbfdfe; */
+   
+
+}
