@@ -1,3 +1,10 @@
+Deployed my project both in vercel and Netlify and the links are ,
+
+https://shoplane-lavanya-fe1project.vercel.app
+
+https://lavanya-shoplane.netlify.app
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
