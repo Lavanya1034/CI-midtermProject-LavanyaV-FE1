@@ -60,18 +60,18 @@ function LayOut() {
             placeholder="Search..."
             onChange={searchHandler}
           />
-          <div>{searchKey?
-            <Link to={`/search/${searchKey}`}>
+          <div>
+            {searchKey ? (
+              <Link to={`/search/${searchKey}`}>
+                <button class="btn btn-primary" type="button">
+                  Search
+                </button>
+              </Link>
+            ) : (
               <button class="btn btn-primary" type="button">
                 Search
               </button>
-             
-            </Link>:(
-               <button class="btn btn-primary" type="button">
-               Search
-             </button>
-            )
-}
+            )}
           </div>
         </div>
       </div>
