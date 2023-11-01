@@ -45,7 +45,7 @@ function DisplayCartWish({ cartWishproducts, cartOrWish }) {
         position: "bottom-center",
         autoClose: 2000,
         style: {
-          background:"#FFFFDD",
+          background: "#FFFFDD",
           color: "black", // Change the text color
         },
       });
@@ -60,7 +60,6 @@ function DisplayCartWish({ cartWishproducts, cartOrWish }) {
         }
       >
         {cartWishproducts.map((prodMatched, ind) => (
-          
           <div
             className={
               cartOrWish == "cart"
@@ -68,7 +67,6 @@ function DisplayCartWish({ cartWishproducts, cartOrWish }) {
                 : " card wishCardStyle"
             }
           >
-            {console.log(prodMatched)}
             <div id="left-sec">
               <img
                 id="image-size"
@@ -84,20 +82,20 @@ function DisplayCartWish({ cartWishproducts, cartOrWish }) {
               <div className="title-space">
                 <h1 className="font-changing">{prodMatched.title}</h1>
               </div>
-              {cartOrWish=="wish"&& 
-              <div style={{width:"100%"}}>
-                {console.log(prodMatched)}
-                <StarRatings
-                  rating={prodMatched.rating.rate} // The initial rating (you can change this dynamically)
-                  starRatedColor="gold" // The color of the filled-in stars
-                  // changeRating={(newRating) => console.log(newRating)} // Callback function when the rating changes
-                  numberOfStars={5} // Total number of stars to display
-                  name="rating" // Unique name for the rating input (required for accessibility)
-                  starDimension="20px" // Customize the size of the stars
-                  starSpacing="2px" // Customize the spacing between stars
-                />
-                <p>({prodMatched.rating.count})</p>
-              </div>}
+              {cartOrWish == "wish" && (
+                <div style={{ width: "100%" }}>
+                  <StarRatings
+                    rating={prodMatched.rating.rate} // The initial rating (you can change this dynamically)
+                    starRatedColor="gold" // The color of the filled-in stars
+                    // changeRating={(newRating) => console.log(newRating)} // Callback function when the rating changes
+                    numberOfStars={5} // Total number of stars to display
+                    name="rating" // Unique name for the rating input (required for accessibility)
+                    starDimension="20px" // Customize the size of the stars
+                    starSpacing="2px" // Customize the spacing between stars
+                  />
+                  <p>({prodMatched.rating.count})</p>
+                </div>
+              )}
               <hr />
               <div id="bottom-sym">
                 <p>
@@ -118,8 +116,10 @@ function DisplayCartWish({ cartWishproducts, cartOrWish }) {
                       style={{ color: "red" }}
                       onClick={() => handleMinus(ind)}
                     />
-                    
-                    <span className="border-gray-900 w-3 pl-2 pr-3 font-bold bg-sky-100">{prodMatched.quantity}</span>
+
+                    <span className="border-gray-900 w-3 pl-2 pr-3 font-bold bg-sky-100">
+                      {prodMatched.quantity}
+                    </span>
                     <BsFillCartPlusFill
                       className="cart-sym"
                       style={{ color: "green" }}
@@ -130,18 +130,15 @@ function DisplayCartWish({ cartWishproducts, cartOrWish }) {
 
                 {/* Button is added for wishlist page alone */}
 
-                {cartOrWish == "wish" && (
-                  <CartBtn prodMatched={prodMatched} />
-                )}
-        
+                {cartOrWish == "wish" && <CartBtn prodMatched={prodMatched} />}
+
                 <div className="d-flex justify-center items-center">
-                <BsFillTrash3Fill
-                  onClick={() => handletrash(ind)}
-                  
-                  
-                  className={`trash mb-2 ${cartOrWish == "cart"? "trashbtnCart":null}`}
-                  
-                />
+                  <BsFillTrash3Fill
+                    onClick={() => handletrash(ind)}
+                    className={`trash mb-2 ${
+                      cartOrWish == "cart" ? "trashbtnCart" : null
+                    }`}
+                  />
                 </div>
               </div>
             </div>

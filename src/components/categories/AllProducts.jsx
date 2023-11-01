@@ -6,12 +6,14 @@ import { EndPoints } from "../../api/EndPoints";
 import { useParams } from "react-router-dom";
 
 function AllProducts() {
-  let {key} = useParams()
-  console.log(key)
-  //if param is not present, then key is set to null- because only when this 
+  let { key } = useParams();
+  console.log(key); 
+  //if param is not present, then key is set to null- because only when this
   //component called for search- param will be set
-  if(key == undefined){key = null}
- 
+  if (key == undefined) {
+    key = null;
+  }
+
   const [productsData, setProductsData] = useState([]);
   const [err, setErr] = useState(null);
 
@@ -37,15 +39,24 @@ function AllProducts() {
   }, [key]);
   //if the component is called for search- props will be available. Then in that case
   //have to filter the product with title and display
-
- if(key && productsData){
-  let newPro = productsData.filter((each)=>each.title.toLowerCase().includes(key.trim().toLowerCase()))
-  productsData.splice(0);
-  productsData.push(...newPro);
-}
-console.log(productsData)
+  console.log(key)
+  console.log(productsData)
+  if (key !== null && key !== undefined  && productsData) {
+    console.log(key)
+    let newPro = productsData.filter((each) =>
+      each.title.toLowerCase().includes(key.trim().toLowerCase())
+    );
+    console.log(newPro)
+    if(newPro.length>0){
+    productsData.splice(0);
+    productsData.push(...newPro)
+    }
+    console.log(productsData)
+   
+  }
 
   let contents = productsData.map((productInd) => (
+    
     <DisplayProducts
       key={productInd.id}
       id={productInd.id}
@@ -54,7 +65,7 @@ console.log(productsData)
       image={productInd.image}
       price={productInd.price}
       rating={productInd.rating}
-      title = {productInd.title}
+      title={productInd.title}
     />
   ));
 

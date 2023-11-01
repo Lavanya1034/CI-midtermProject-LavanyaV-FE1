@@ -1,7 +1,7 @@
 import Dropdown from "react-bootstrap/Dropdown";
 import "./../../styles/LayOut.css";
 import { BiUserCircle } from "react-icons/bi";
-import { BsCart3} from "react-icons/bs";
+import { BsCart3 } from "react-icons/bs";
 import { AiTwotoneHeart, AiOutlineHeart } from "react-icons/ai";
 import { TbLogin } from "react-icons/tb";
 import { MdPersonAdd } from "react-icons/md";
@@ -18,7 +18,7 @@ function LayOut() {
   const [user, setUser] = useState(null);
   const nav = useNavigate();
 
-  const [searchKey, setSearchKey] = useState("Enter search");
+  const [searchKey, setSearchKey] = useState(null);
   //check whether token is present - if logged in, token is set else returns null
   const loginToken = localStorage.getItem("token");
   useEffect(() => {
@@ -40,7 +40,7 @@ function LayOut() {
   function searchHandler(e) {
     e.preventDefault();
     setSearchKey(e.target.value);
-    //nav("/all")
+    nav("/all");
   }
 
   return (
@@ -52,20 +52,26 @@ function LayOut() {
           <span style={{ color: "white" }}>LANE</span>
         </div>
       </h1>
-      <div className={!checkLogin?"m-3 flex basis-1/2":"m-3 flex"}>
+      <div className={!checkLogin ? "m-3 flex basis-1/2" : "m-3 flex"}>
         <div class="input-group">
           <input
             type="text"
             class="form-control"
             placeholder="Search..."
             onChange={searchHandler}
-            
           />
-          <div>
-            <button class="btn btn-primary" type="button"  >
-              <Link to={`/search/${searchKey}`}  className="text-black">Search</Link>
-            </button>
-            
+          <div>{searchKey?
+            <Link to={`/search/${searchKey}`}>
+              <button class="btn btn-primary" type="button">
+                Search
+              </button>
+             
+            </Link>:(
+               <button class="btn btn-primary" type="button">
+               Search
+             </button>
+            )
+}
           </div>
         </div>
       </div>
@@ -122,7 +128,9 @@ function LayOut() {
           </div>
         ) : (
           <div id="welcome-note">
-            <h2 id="note" className="m-1">Welcome {user}!!!</h2>
+            <h2 id="note" className="m-1">
+              Welcome {user}!!!
+            </h2>
             <Button
               onClick={handleLogout}
               variant="light"

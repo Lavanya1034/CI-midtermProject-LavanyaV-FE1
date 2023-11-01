@@ -240,7 +240,10 @@ const SignUpPage = () => {
                       : "form-control"
                   }
                 />
-                <div className="m-1" onClick={() => setShowConPass(!showConPass)}>
+                <div
+                  className="m-1"
+                  onClick={() => setShowConPass(!showConPass)}
+                >
                   {!showConPass ? (
                     <AiOutlineEyeInvisible className="eye-visible" />
                   ) : (
@@ -261,10 +264,11 @@ const SignUpPage = () => {
               <Button
                 type="submit"
                 className={`d-flex justify-center items-center gap-2
-                  ${formik.isValid
-                    ? "btn btn-success btn-block"
-                    : "btn btn-primary btn-block"}`
-                }
+                  ${
+                    formik.isValid
+                      ? "btn btn-success btn-block"
+                      : "btn btn-primary btn-block"
+                  }`}
               >
                 <MdOutlineAssignmentInd />
                 Sign Up

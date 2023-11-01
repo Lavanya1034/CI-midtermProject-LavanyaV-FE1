@@ -22,7 +22,6 @@ function WishItems() {
         </div>
       )}
     </div>
-    
   );
 }
 

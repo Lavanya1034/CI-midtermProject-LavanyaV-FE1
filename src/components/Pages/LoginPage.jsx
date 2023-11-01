@@ -142,9 +142,11 @@ const LoginPage = () => {
                   <Button
                     type="submit"
                     className={`d-flex justify-center items-center
-                      ${touched && !errors.username && !errors.password
-                        ? "btn btn-success btn-block"
-                        : "btn btn-primary btn-block"}
+                      ${
+                        touched && !errors.username && !errors.password
+                          ? "btn btn-success btn-block"
+                          : "btn btn-primary btn-block"
+                      }
                     `}
                   >
                     <TbLogin />

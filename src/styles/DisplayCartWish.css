@@ -140,6 +140,9 @@
     
     #Empty-det{
         margin-left: 30%;
+        height: fit-content ;
+        padding:2%;
+        font-size: large;
     }
     
     .eachproduct-detail{
@@ -174,7 +177,12 @@
         color:rgb(98, 114, 230);
         width:100%;
     }
-    
+    #Empty-det{
+        
+        padding:2%;
+        
+        height: fit-content ;
+    }
     
 }
 
