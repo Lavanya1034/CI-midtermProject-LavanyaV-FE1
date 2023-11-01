@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 
 function AllProducts() {
   let { key } = useParams();
-  console.log(key); 
+  console.log(key);
   //if param is not present, then key is set to null- because only when this
   //component called for search- param will be set
   if (key == undefined) {
@@ -39,24 +39,18 @@ function AllProducts() {
   }, [key]);
   //if the component is called for search- props will be available. Then in that case
   //have to filter the product with title and display
-  console.log(key)
-  console.log(productsData)
-  if (key !== null && key !== undefined  && productsData) {
-    console.log(key)
+
+  if (key !== null && key !== undefined && productsData) {
     let newPro = productsData.filter((each) =>
       each.title.toLowerCase().includes(key.trim().toLowerCase())
     );
-    console.log(newPro)
-    if(newPro.length>0){
-    productsData.splice(0);
-    productsData.push(...newPro)
+    if (newPro.length > 0) {
+      productsData.splice(0);
+      productsData.push(...newPro);
     }
-    console.log(productsData)
-   
   }
 
   let contents = productsData.map((productInd) => (
-    
     <DisplayProducts
       key={productInd.id}
       id={productInd.id}
