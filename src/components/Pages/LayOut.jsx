@@ -46,7 +46,7 @@ function LayOut() {
   return (
     <div id="layout">
       <h1 id="heading-first" className="flex gap-3 items-center basis-1/3">
-        {/* <img src={logo} alt="logo" height="7%" width="7%" /> */}
+        <img src={logo} alt="logo" height="7%" width="7%" />
         <div>
           <span style={{ color: "#80B3FF" }}>SHOP</span>
           <span style={{ color: "white" }}>LANE</span>
@@ -62,9 +62,9 @@ function LayOut() {
             
           />
           <div>
-            {/* <button class="btn btn-primary" type="button"  >
+            <button class="btn btn-primary" type="button"  >
               <Link to={`/search/${searchKey}`}  className="text-black">Search</Link>
-            </button> */}
+            </button>
             
           </div>
         </div>
