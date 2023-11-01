@@ -7,32 +7,30 @@ import CartBtn from "./CartBtn";
 import WishListBtn from "./WishListBtn";
 
 function IndProductDetail() {
-  const {id} = useParams();
+  const { id } = useParams();
   const [prodMatched, setProdMatched] = useState([]);
   const [err, setErr] = useState(null);
- 
-  useEffect(() => {
-    axios.get(EndPoints.INDPRODUCT_CATEGORY_URL + id)
-    .then(
-      (response) => {
-        
-        setProdMatched(response.data);
-      },
-      (error) => {
-        console.log(error.response.data.message)
-        setErr(error.response.data.message);
-      }
-    )
-    .catch((err)=>{
-      console.log(err)
-      setErr(err.message)
-    })
-  },[id]);
-  
-  return (
-    <div className="container d-flex justify-center items-center p-4" >
 
-      {console.log("ind")}
+  useEffect(() => {
+    axios
+      .get(EndPoints.INDPRODUCT_CATEGORY_URL + id)
+      .then(
+        (response) => {
+          setProdMatched(response.data);
+        },
+        (error) => {
+          console.log(error.response.data.message);
+          setErr(error.response.data.message);
+        }
+      )
+      .catch((err) => {
+        console.log(err);
+        setErr(err.message);
+      });
+  }, [id]);
+
+  return (
+    <div className="container d-flex justify-center items-center p-4">
       {err ? (
         <div
           style={{
@@ -58,20 +56,22 @@ function IndProductDetail() {
           <div id="right-sec" className="mt-3">
             <div className="d-flex flex-col">
               <span className="text-title text-xl">BRAND</span>
-              <h1 id="tit" className="text-xl">{prodMatched.title}</h1>
+              <h1 id="tit" className="text-xl">
+                {prodMatched.title}
+              </h1>
               <p>{prodMatched.description}</p>
               <hr />
             </div>
             <div id="bottom-symbols">
               <div>
-                <p style={{color:"blue"}}>
+                <p style={{ color: "blue" }}>
                   <span>&#xFF04;</span>
                   {prodMatched.price}
                 </p>
               </div>
               <div className="d-flex gap-2">
-               <CartBtn prodMatched={prodMatched}/>
-               <WishListBtn prodMatched={prodMatched}/>
+                <CartBtn prodMatched={prodMatched} />
+                <WishListBtn prodMatched={prodMatched} />
               </div>
             </div>
           </div>

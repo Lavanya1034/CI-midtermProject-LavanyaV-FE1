@@ -7,15 +7,12 @@ import { useEffect, useState } from "react";
 import { AiFillHeart } from "react-icons/ai";
 import { addWish, deleteWish } from "../../reducers/wishSlice";
 
-
 //component for heart symbol-wishlist functionality
-function WishListBtn({prodMatched}) {
-   
+function WishListBtn({ prodMatched }) {
   const dispatch = useDispatch();
   const wishDetails = useSelector((state) => state.wishStore.wish);
   const [availableInWish, setAvailableInWish] = useState(false);
 
-  
   //for wishlist
 
   useEffect(() => {
@@ -30,13 +27,10 @@ function WishListBtn({prodMatched}) {
     }
   }, [wishDetails, prodMatched.id]);
 
-
   //for wishList control and to set heart red colour
   const handleWishClick = () => {
     if (!availableInWish) {
-     
       dispatch(
-       
         addWish({
           ...prodMatched,
           quantity: 1,
@@ -46,19 +40,21 @@ function WishListBtn({prodMatched}) {
         position: "bottom-right",
         autoClose: 3000,
         style: {
-          background:"#45474B",
+          background: "#45474B",
           color: "white", // Change the text color
         },
       });
     } else {
-      let indWish = wishDetails.findIndex((ele, index) => ele.id == prodMatched.id);
+      let indWish = wishDetails.findIndex(
+        (ele, index) => ele.id == prodMatched.id
+      );
 
       dispatch(deleteWish(indWish));
       toast.warning(`${prodMatched.title} removed from Wishlist`, {
         position: "bottom-right",
         autoClose: 3000,
         style: {
-          background:"#FFFD8C",
+          background: "#FFFD8C",
           color: "black", // Change the text color
         },
       });
@@ -67,16 +63,15 @@ function WishListBtn({prodMatched}) {
   };
 
   return (
-    <div >
-        <AiFillHeart
-          style={{ color: availableInWish ? "red" : "black" }}
-          id="heartSymb"
-          onClick={handleWishClick}
-        />
-        <ToastContainer/>
-
+    <div>
+      <AiFillHeart
+        style={{ color: availableInWish ? "red" : "black" }}
+        id="heartSymb"
+        onClick={handleWishClick}
+      />
+      <ToastContainer />
     </div>
-  )
+  );
 }
 
-export default WishListBtn
+export default WishListBtn;
