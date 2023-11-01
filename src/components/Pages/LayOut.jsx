@@ -40,7 +40,7 @@ function LayOut() {
   function searchHandler(e) {
     e.preventDefault();
     setSearchKey(e.target.value);
-    nav("/all")
+    //nav("/all")
   }
 
   return (
@@ -62,9 +62,9 @@ function LayOut() {
             
           />
           <div>
-            <button class="btn btn-primary" type="button"  >
+            {/* <button class="btn btn-primary" type="button"  >
               <Link to={`/search/${searchKey}`}  className="text-black">Search</Link>
-            </button>
+            </button> */}
             
           </div>
         </div>
