@@ -65,6 +65,7 @@ function WishListBtn({ prodMatched }) {
   return (
     <div>
       <AiFillHeart
+        data-toggle="tooltip" data-placement="bottom" title="Add/Remove for Wishlist"  
         style={{ color: availableInWish ? "red" : "black" }}
         id="heartSymb"
         onClick={handleWishClick}

@@ -144,6 +144,7 @@ function LayOut() {
         <div style={{ display: "flex" }}>
           <div className="superScript">
             <AiTwotoneHeart
+              data-toggle="tooltip" data-placement="bottom" title="WishList"
               className="right-icons"
               id="wishIcon"
               onClick={() => nav("/wish")}
@@ -152,6 +153,7 @@ function LayOut() {
           </div>
           <div className="superScript">
             <BsCart3
+              data-toggle="tooltip" data-placement="bottom" title="Cart"
               className="right-icons text-white"
               onClick={() => nav("/cart")}
             />
