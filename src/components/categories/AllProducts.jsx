@@ -8,10 +8,13 @@ import { useParams } from "react-router-dom";
 function AllProducts() {
   let { key } = useParams();
   console.log(key);
+  //setting a flag identifying coming from /all route:
+  let allFlag = false;
   //if param is not present, then key is set to null- because only when this
   //component called for search- param will be set
   if (key == undefined) {
     key = null;
+    allFlag = true;
   }
 
   const [productsData, setProductsData] = useState([]);
@@ -36,7 +39,7 @@ function AllProducts() {
         console.log(error);
         setErr(error);
       });
-  }, [key]);
+  }, [key,allFlag]);
   //if the component is called for search- props will be available. Then in that case
   //have to filter the product with title and display
 
