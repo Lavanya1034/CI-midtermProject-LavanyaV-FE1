@@ -59,7 +59,7 @@ function IndProductDetail() {
               <h1 id="tit" className="text-xl">
                 {prodMatched.title}
               </h1>
-              <p>{prodMatched.description}</p>
+              <p className="min-h-fit text-sm">{prodMatched.description}</p>
               <hr />
             </div>
             <div id="bottom-symbols">
